@@ -102,4 +102,10 @@ value_cost = int(Total_no_chapati)
 Total_cost = value_cost * price
 outcomes = f"For this number of chapatis it will cost you {Total_cost:.2f}KES "
 print(outcomes)
+# it can also perform addition
+price = 54
+tax = 0.43
+text = f"The price is {price + (price * tax)} dollars"
+print(text)
 
+#TASK available at slide 27

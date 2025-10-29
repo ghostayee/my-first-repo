@@ -19,7 +19,7 @@ print(type(password_correct))
 #python input and user inputs
 value = input("enter any number of hours and will convert to minutes:")
 outcome = int(value) * 60
-print(f"Awesome ! This will be equals to {outcome} minutes")
+print(f"Awesome! This will be equals to {outcome} minutes")
 
 #another example of output
 weight = 20
@@ -31,7 +31,7 @@ x = 200
 print(x)
 print(type(x))
 
-y = str(x) 
+y = str(x)
 print(y)
 print(type(y))
 
@@ -55,6 +55,11 @@ text = "1005"
 number = int(text)
 print(number)
 print(type(number))
+
+secret_multiline = '''this is a great recipe of coal
+creation that makes most people laugh when they use.
+the greatest sophy of life is to be happy always and create
+the enjoyment environment '''
 
 
 
