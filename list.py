@@ -5,7 +5,7 @@ print(items[5])
 items[0] = "Pear"
 print(items)
 
-print(items[1][2])
+print(items[1][0])
 
 values = [1,2,3,[4,5,6,["x","y"]],[7,8,9],10]
 print(values[3][3][0])
@@ -17,6 +17,8 @@ items = ["Mango","Apple","Banana",1,2,3]
 items.append("Orange")
 items.append(100)
 items.append([80,90])
+items.append([84,93])
+
 print(items)
 
 #extend

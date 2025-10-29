@@ -61,27 +61,45 @@ print(fruit.rstrip(".,grt"))
 sentence = "this is a dog; of brand; German Shepherd"
 print(sentence.split(';'))
 
-#title
+#title it capitalize the first letter in a word and the rest in
+#in small letters.
 print(sentence.title())
 
-#replace.
-student = "Hello world"
+#replace. if you want to be only two first occurrence then add , 2 in the code.
+student = "HELLO world"
 print(student.replace("l","k"))
 # print(student.index("x"))
-print(student.find("x"))
-print(student.count('H'))
-print(student.startswith("Helo"))
-print(student.endswith("s"))
+print(student.find("x")) #finds the index of a character
+
+print(student.count('H'))#Returns the number of times a specified
+#value occurs in a string
+
+print(student.startswith("HELLO")) #its always case sensitive
+print(student.endswith("d", 6))
 print(student.isupper())
 print(student.islower())
 print(student.istitle())
 
+#join
+myDict = {"name": "John", "country": "Norway"}
+mySeparator = "TEST"
+
+x = mySeparator.join(myDict)
+
+print(x)
+
 first_name = "Ken"
-last_name = "Mugambi"
+last_name = "Mummy"
 value = f"{first_name} {last_name} is a student"
 print(value)
-print("This is a statement from Ken Mugambi ")
+print("This is a statement from Ken Mummy ")
 print(f"This is a statement from {first_name} {last_name}")
 
-x = 5
+#chapati f format method of str.
+price = 25
+Total_no_chapati = input("Enter number of chapati you want to buy:")
+value_cost = int(Total_no_chapati)
+Total_cost = value_cost * price
+outcomes = f"For this number of chapatis it will cost you {Total_cost:.2f}KES "
+print(outcomes)
 

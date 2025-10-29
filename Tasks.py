@@ -1,13 +1,13 @@
 # TASK 1 on slide 27 -strings.
 # create a python file and name it string tasks.py
 
-#task 1: name = “  JOHn  .“ to “john”
+#QUIZ 1: name = “  JOHn  .“ to “john”
 name = "JOHn . "
 clean_name = name[0].upper() + name[1:].lower().strip().replace(".", "")
 print(clean_name)
 
 
-# Tak 2: Slice the below string to get you the resulting sentence:
+# QUIZ 2: Slice the below string to get you the resulting sentence:
 #a) sentence_one = “The Dog Breed is German Shepherd” only display “Breed is German”
 sentence_one = "The dog breed is a german shepherd"
 length = len(sentence_one)
@@ -20,7 +20,7 @@ print(sentence_two[16:30])
 index = sentence_two.index("s")
 print(index)
 
-#Task 3: Split the below sentence using a semicolon i.e ; And display length of the
+#QUIZ 3: Split the below sentence using a semicolon i.e ; And display length of the
 # result.
 # “The lazy dog; ran so fast; it hit the wall.”
 content_sentence = "The lazy dog; ran so fast; it hit the wall."
@@ -37,43 +37,94 @@ print(clean_name)
 
 
 
-
-
-
-
-
-
-
-
-
-
 # #TASK 2 on slide 30: Floats and integers.
+#quiz 1: Convert a float to an integer with an inbuilt function in Python
+#temp = 56.8926 to 57
+temp = 56.8926
+print(round(temp))
+
+
+#Quiz 2: Convert the float below to give the results as follows
+# temp = 56.8926 to 56.89
+result = round(temp, 2)
+print(result)
+
+# Quiz 3: Convert the float below to give the results as follows
+# temp = 56.8926 to 56.893
+round = round(temp, 3)
+print(round)
+
+# Quiz 4: Convert the float below to give the results as follows
+# temp=56.8926 to 8.926
+# NB: Use string  slice & concatenation, but have result as float
+# convert to string first
+conv = str(temp)
+sliced = conv[2:7]
+new_conv = sliced[1] + "." + sliced[2:]
+print(new_conv)
 
 
 
 
 
-# #TASK 3 on slide 35: lists.
-# #quiz:1
-# trainees = ["John", [2, ["James","Mary"]]]
-# print(trainees[1][0])
+#TASK 3 on slide 35: lists.
+#quiz:1
+trainees = ["John", [2, ["James","Mary"]]]
+print(trainees[1][0])
 
-# #quiz:2 output james from the list
-# print(trainees[1][1][0])
+#quiz:2 output james from the list
+print(trainees[1][1][0])
 
-# # quiz: 3 Using a method add 56 at the end of the list.
-# trainees.append(56)
-# print(trainees)
+# quiz: 3 Using a method add 56 at the end of the list.
+trainees.append(56)
+print(trainees)
 
-# # quiz: 4 Using a method add the name Mike between James and Mary.
-# trainees[1][1].insert(1,"Mike")
-# print(trainees)
+# quiz: 4 Using a method add the name Mike between James and Mary.
+trainees[1][1].insert(1,"Mike")
+print(trainees)
 
-# # quiz: 5 Using a method remove John from the list.
-# trainees.remove("John")
-# print(trainees)
+# quiz: 5 Using a method remove John from the list.
+trainees.remove("John")
+print(trainees)
 
-# # quiz: 6 Using a method determine length of list.
-# trainers = ["John", [2, ["James","Mary"]]]
-# length = (len(trainers))
-# print(length)
+# quiz: 6 Using a method determine length of list.
+trainers = ["John", [2, ["James","Mary"]]]
+length = (len(trainers))
+print(length)
+
+# then more questions on this link 
+link = "https://realpython.com/quizzes/python-lists-tuples/viewer/"
+
+
+
+
+
+
+#TASK 5 on slide 38: lists.
+# 1.How to update a tuple? - adding / removing / changing items in a tuple
+
+#Quiz 1. numbers = (10, 20, 30, 40, 50)Add 60 to the end,Replace 30 with 35.
+numbers = (10, 20, 30, 40, 50)
+num = list(numbers)
+print(type(num))
+num.append(60)
+num[2] = 35
+x = tuple(num)
+print(x)
+
+# Quiz 2. values = (15, 5, 30, 25, 10) arrange the elements in ascending order.
+values = (15, 5, 30, 25, 10)
+conv = list(values)
+conv.sort()
+tuple = tuple(conv)
+print(tuple)
+
+#Quiz 3. fruits = ("apple", "banana", "cherry", "banana", "mango", "banana")
+#Count occurrences of "banana",Remove all occurrences of "banana".
+fruits = ("apple", "banana", "cherry", "banana", "mango", "banana")
+fruits_list = list(fruits)
+print(fruits_list.count("banana"))
+
+
+
+
