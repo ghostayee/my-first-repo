@@ -116,15 +116,62 @@ print(x)
 values = (15, 5, 30, 25, 10)
 conv = list(values)
 conv.sort()
-tuple = tuple(conv)
-print(tuple)
+tuple_back = tuple(conv)
+print(tuple_back)
 
 #Quiz 3. fruits = ("apple", "banana", "cherry", "banana", "mango", "banana")
 #Count occurrences of "banana",Remove all occurrences of "banana".
 fruits = ("apple", "banana", "cherry", "banana", "mango", "banana")
-fruits_list = list(fruits)
-print(fruits_list.count("banana"))
+fruits = tuple(x for x in fruits if x != "banana")
+print(fruits)
 
+fruits_combo = list(fruits)
+fruits_combo = [x for x in fruits_combo if x != "banana"]
+print(fruits_combo)
+converted = tuple(fruits_combo)
+print(converted )
 
+#QUIZ 4 :4.
+# names = ("Alice", "Bob", "Charlie", "David") Reverse the order of elements using sort 
+# method.
 
+names = ("Alice", "Bob", "Charlie", "David")
+names_reversed = tuple(reversed(names))
+print(names_reversed)
 
+# method 2 especially when you want to change list permanently
+names2 = list(names)
+names2.reverse()
+print(names2)
+
+name3 = list(reversed(names2))
+print(name3)
+
+names4 = names2[::-1]
+print(names4)
+
+# QUIZ 5: 5. colors = ("red", "blue", "green")add "yellow" at index 1,Extend with 
+# ["purple", "orange"]
+
+# method 1. con
+colors = ("red", "blue", "green")
+colors = colors[:1] + ("yellow",) + colors[1:]
+print(colors)
+
+#now we come and convert the to a tuple
+colors = colors + tuple(["purple", "orange"])
+print(colors)
+
+# method 2
+# convert it into a list first
+colors1 = ("red", "blue", "green")
+colors2 = list(colors1)
+colors2.insert(1,"yellow")
+colors2.extend(["purple", "orange"])
+print(colors2)
+
+# alternatively i can use
+colors3 = ("red", "blue", "green")
+colors4 = list(colors3)
+colors4 += ["purple","orange"]
+print(colors4)
