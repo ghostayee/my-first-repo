@@ -170,8 +170,13 @@ colors2.insert(1,"yellow")
 colors2.extend(["purple", "orange"])
 print(colors2)
 
-# alternatively i can use
+# alternatively i can use +=
 colors3 = ("red", "blue", "green")
 colors4 = list(colors3)
 colors4 += ["purple","orange"]
 print(colors4)
+
+
+
+
+

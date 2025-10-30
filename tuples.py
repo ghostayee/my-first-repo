@@ -19,3 +19,6 @@ print(j)
 #count - returns the no of occurrences of an item in a tuple
 no = items.count("Monday")
 print(no)
+
+#notes about tuple
+# Hashable (if elements are hashable): Tuples can be dictionary keys or set elements.
