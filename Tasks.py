@@ -37,7 +37,7 @@ print(clean_name)
 
 
 
-# #TASK 2 on slide 30: Floats and integers.
+# SLIDE 30: Floats and integers.
 #quiz 1: Convert a float to an integer with an inbuilt function in Python
 #temp = 56.8926 to 57
 temp = 56.8926
@@ -67,7 +67,7 @@ print(new_conv)
 
 
 
-#TASK 3 on slide 35: lists.
+#SLIDE 35: lists.
 #quiz:1
 trainees = ["John", [2, ["James","Mary"]]]
 print(trainees[1][0])
@@ -100,7 +100,7 @@ link = "https://realpython.com/quizzes/python-lists-tuples/viewer/"
 
 
 
-#TASK 5 on slide 38: lists.
+#SLIDE 38: lists.
 # 1.How to update a tuple? - adding / removing / changing items in a tuple
 
 #Quiz 1. numbers = (10, 20, 30, 40, 50)Add 60 to the end,Replace 30 with 35.
@@ -178,5 +178,69 @@ print(colors4)
 
 
 
+# TASK 40: follow the two links
+#  follow the two link and do the test.
+# done the first link
+link_quiz = "https://realpython.com/quizzes/python-lists-tuples/"
+score = 100
+
+link_quiz2 = "https://realpython.com/quizzes/python-lists-tuples/"
+# union operator
+# .union operator
 
 
+
+
+# TASK 43 data structures.
+# QUIZ: 1
+# Create a file called mydstask.py and attempt the below questions:
+# my_ds = [23, “Jane”, (560), [“Lesson”, “Maths”, {“currency” : “KES”}], 987, (76,”John”)]
+
+
+
+# SLIDE 56  if elif and else
+# method 1
+weight = float(input("Enter your weight: "))
+height = float(input("Enter your height: "))
+age = float(input("Enter your age: "))
+
+if weight > height and weight > age:
+    print("weight is the largest")
+elif height > weight and height > age:
+    print("height is the largest")
+elif height == weight == age:
+    print("They are all the same and equal")
+else:
+    print("age is the largest")
+print("Done!")
+
+# Quiz 2:
+
+temp = float(input("Enter the temperature: "))
+if temp > 30:
+    print("Temperature is too high")
+elif temp >15 and temp < 30:
+    print("Normal temperature")
+else:
+    print("cold temperature")
+
+# QUIZ 3:
+x = float(input("Enter your age"))
+y = float(input("Enter your height"))
+
+if 10 <= x <=20 and y > 100:
+    print("condition met")
+else:
+    print("conditions not met")
+
+# QUIZ 4
+# 4. Write a Python program that checks if a variable password is equal
+#  to the string "secret123". If it is, print "Access   granted"
+# , otherwise print "Access denied"
+
+password = str(input("Enter your password"))
+
+if password == "secret123":
+    print("Access Granted")
+else:
+    print("Access denied")
