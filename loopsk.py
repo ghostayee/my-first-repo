@@ -24,3 +24,19 @@ for y in list3:
     if y % 10 ==0:
         list4.append(y)
 print(list4)
+
+ls1 = [ ("Jay", "20"), ("Mo", "30"), ("Mya", "32") ]
+sum = 0
+for i in ls1:
+    sum += int(i[1])
+
+print(sum)
+
+even = []
+for x in range(1,51):
+    if x%2 == 0:
+        even.append(x)
+
+print(even)
+count = len(even)
+print(count)
