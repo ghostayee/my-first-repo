@@ -12,6 +12,6 @@ if height > age and height > weight:
 elif age > height and age > weight:
     print(f"{age} is the largest")
 elif age == weight == height:
-    print("the are all equal")
+    print("they are all equal")
 else:
     print(f"{weight} is the largest")
