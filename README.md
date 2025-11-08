@@ -576,3 +576,73 @@ Questions on the link on slide 65
 no 8,9,11,14
 
 11 - RESEARCH ON DATETIME LIBRARY
+**FUNCTIONS**
+- A function is a block of reusable code
+
+**Why Use Functions?**
+1.Reusability of code
+2.Modularity - break large pieces of code into smaller manageble parts
+3.Code Organization & Better readability
+4.Better debugging
+5.Scalability of code
+
+**Python defines functions using def keyword;
+**A function has 3 parts:
+1.**Function definition** - use the def keyword , give the function a name and end in ()
+e.g def add_numbers():
+    ***Every function must end in ()**
+
+2.**Function Body** - contains code to be executed by the funnction
+e.g def add_numbers():
+        a = 4
+        b = 5.   
+        c = a + b #function body
+
+3.**Function call** - calling on the function by its name to execute code in the function body
+e.g.add_numbers()
+
+
+**Functions use the return keyword**
+-> return signifies the end of a function 
+
+**Variable Scopes**
+-Scope defines / determines where a variable is accessible in a program
+-Two types of scopes in Python:
+1.Local Scope /Variables
+--this scope contains local variables
+--variables in this scope(local) are only accessible within their defined blocks / in the function
+
+2.Global scope/ Variables
+--this scope contains global variables
+--variables in this scope are accessible anywhere in the program (both global + local)
+
+**Parameters & Arguments**
+Parameters -> temporary variables passed when defining a function as placeholders before an actual value is passed to
+make functions reusable
+Arguments -> actual values passed to a function in place of parameters when calling a function
+**Note** -> the number and order of arguments must match the number and order of parameters 
+
+**Task**
+on the questions 1 -20 ...do the following questions using functions
+-> question 1 , question 2, question 5
+
+-> question on slide 70
+
+
+**task**
+On questions 1 - 20 ...redo 15-20 using functions.
+
+---Using functions---:
+1.Write a Python program to reverse a string.
+2.Write a Python program to print the even numbers from a given list.
+3.Write a Python program to create and print a list where the values are the squares of
+ numbers between 1 and 30 (both included).
+
+
+**Functions Project**
+---Use functions to create bank program:
+1.That can create an account
+2.That can deposit an amount
+3.That can withdraw an amount
+4.That can check balance
+5.That can close/delete an account
