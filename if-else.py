@@ -61,3 +61,4 @@ elif n % 3 == 0:
 else:
     print("Number is neither divisible by 2 nor three")
 print("Done!")
+# summery
