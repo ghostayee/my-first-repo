@@ -31,6 +31,7 @@ for i in ls1:
     sum += int(i[1])
 
 print(sum)
+print(f"amazing {sum}")
 
 even = []
 for x in range(1,51):
