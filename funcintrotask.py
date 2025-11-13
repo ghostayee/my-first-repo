@@ -65,6 +65,8 @@ def phone_number(user_input):
         return "+254" + phone[1:]
     elif phone.startswith("1"):
         return "+254" + phone
+    elif len(phone) < 9:
+        return "Incomplete number"
     else:
         return "Invalid phone number format"
 
