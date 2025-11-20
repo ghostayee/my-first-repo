@@ -208,7 +208,8 @@ TASK
 9. isupper() - checks whether a string is in uppercase format
  & islower() - checks whether a string is in lowercase format
      -returns a Boolean value
-10. split() - split a string into substrings using a specified character - place the substrings in a list
+10. split() - split a string into substrings using a specified character - place the substrings in 
+11. a list
 11. ***join()***
 12. replace() - replace a part of a string with another charcter or characters
 
@@ -646,3 +647,274 @@ On questions 1 - 20 ...redo 15-20 using functions.
 3.That can withdraw an amount
 4.That can check balance
 5.That can close/delete an account
+
+POSTGRE SQL 
+Here are **detailed notes** on functions in Python, how to use them, and how you can apply them to your tasks. After the notes, I’ll walk you through **how to do** each of your tasks using the notes. If you like, I’ll also provide a **video link** to help you learn.
+
+---
+
+##  Notes on Functions in Python
+
+### What a function is
+
+* A function is a block of reusable code that does one specific job. ([w3schools.com][1])
+* You define it once, and you can call it many times.
+* Using functions helps avoid repeating code, keeps things organised, and makes debugging easier. ([Real Python][2])
+
+### Why use functions
+
+Functions give you:
+
+1. **Reusability** – write code once, use it many places.
+2. **Modularity** – break big tasks into smaller, manageable parts.
+3. **Better readability & organisation** – each function does a clear job.
+4. **Easier debugging** – if something breaks, you know which function to check.
+5. **Scalability** – as your code grows, functions help keep things in control.
+
+### How to define and call a function
+
+* To define a function, use the `def` keyword, a name, parentheses `()`, then a colon `:`. Example:
+
+  ````python
+  def my_function():
+      # function body
+      print("Hello")
+  ``` :contentReference[oaicite:2]{index=2}  
+  ````
+* The function body is the indented code under the definition.
+* To call the function, write its name followed by `()`. Example:
+
+  ```python
+  my_function()
+  ```
+* If the function needs input values, you add **parameters** in the definition, and **arguments** when you call it.
+
+  * Parameters = placeholders in definition.
+  * Arguments = actual values you pass when calling. ([Real Python][2])
+* If the function should give back a result, use `return`. When Python hits `return`, it gives the value back to the caller, and exits the function. ([w3schools.com][1])
+
+### Variable scope: Local vs Global
+
+* **Global variables** are defined outside any function. They can be accessed in many parts of the code.
+* **Local variables** are defined inside a function. They only exist inside that function.
+* Good practice: try to keep functions self-contained: pass in what you need (arguments), and return
+* what you produce (results). That makes debugging and reuse easier.
+
+### Key parts of functions
+
+1. **Function definition**: `def function_name(parameters):`
+2. **Function body**: code inside the function, does the work.
+3. **Function call**: where you run the function by its name and give it arguments (if needed).
+
+### Extra important details
+
+* Function names should be meaningful (so someone reading your code knows what the function does). 
+* ([w3schools.com][1])
+* If you don’t include a `return`, Python will return `None` by default. ([w3schools.com][1])
+* Functions allow you to hide complexity: you use them without having to remember all details of
+* how they work. This is called abstraction. ([Real Python][2])
+* Good to keep each function doing *one* job. If you try to do many things in one function, your code 
+* becomes harder to maintain.
+* You’ll often see code divided like: `def read_data():`, `def process_data():`, `def save_results():` 
+* rather than one long script. This is modularity. ([Real Python][2])
+
+### Summary of how you can achieve tasks with functions
+
+* First: identify what each task wants (for example “reverse a string”).
+* Write a function that takes the input (string), does the work (reverse it), and returns the result.
+* Then call that function in your main code (or for testing) with actual values.
+* For larger projects (like your bank program): create multiple functions each doing one job 
+* (create account, deposit, withdraw, etc). Then write a main menu or controller function that 
+* lets the user pick what they want to do and calls the right function accordingly.
+* Keep track of state (for example account balance) with variables. If many functions 
+* need to see or change that state, plan how you will pass values or use global state carefully.
+
+### Recommended Video
+
+Here’s a good video to watch that covers functions in Python for beginners:
+
+[“Python Functions | Python Tutorial for Absolute Beginners #1”]
+(https://www.youtube.com/watch?v=u-OmVr_fT4s&utm_source=chatgpt.com)
+
+Watching this will reinforce the concepts in these notes.
+
+---
+
+## ✅ Applying the Notes: Do the Tasks
+
+Now let’s apply the notes to your tasks step-by-step.
+
+### Task 1: Write a program to reverse a string
+
+**How you do it (using the notes):**
+
+* Define a function `reverse_string(text)` where `text` is a parameter (the input string).
+* In the body, reverse the string. You can use slicing `text[::-1]` or another method.
+* Return the reversed string.
+* In your main code (outside the function), ask the user for a string, call `reverse_string`
+* with that string, and print the result.
+
+**Example:**
+
+```python
+def reverse_string(text):
+    # body: reverse the string
+    return text[::-1]
+
+# main code
+user_input = input("Enter a string: ")
+result = reverse_string(user_input)
+print("Reversed string:", result)
+```
+
+### Task 2: Print even numbers from a given list
+
+**How to do it:**
+
+* Define a function `get_even_numbers(num_list)` where `num_list` is a parameter (a list of numbers).
+* In the body: create an empty list (e.g., `evens = []`), loop through `num_list`, 
+* check if each number is even (`num % 2 == 0`), if yes append to `evens`.
+* Return the `evens` list.
+* In main code: define or get a list, call `get_even_numbers`, then print the returned list.
+
+**Example:**
+
+```python
+def get_even_numbers(num_list):
+    evens = []
+    for num in num_list:
+        if num % 2 == 0:
+            evens.append(num)
+    return evens
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+print("Even numbers are:", get_even_numbers(numbers))
+```
+
+### Task 3: Create and print a list where values are squares of numbers between 1 and 30
+
+**How to do it:**
+
+* Define a function `get_squares(n)` where `n` is the upper limit (30).
+* In the body: create an empty list `squares = []`, loop from 1 to `n` (inclusive), compute `i**2`, 
+* append to `squares`.
+* Return `squares`.
+* In main code: call `get_squares(30)`, print the returned list.
+
+**Example:**
+
+```python
+def get_squares(n):
+    squares = []
+    for i in range(1, n+1):
+        squares.append(i**2)
+    return squares
+
+print("Squares from 1 to 30:", get_squares(30))
+```
+
+### Project: Bank Program using functions
+
+**How to do it:**
+
+* Think of the state you need: account balance, whether account exists, maybe account holder name.
+* Use global variables or better: pass around a dictionary/object with account
+* info (for simplicity though you can use global).
+* Define functions:
+
+  * `create_account()` — sets up the account (balance = 0, account_exists = True)
+  * `deposit(amount)` — adds `amount` to `balance` if account exists
+  * `withdraw(amount)` — subtracts `amount` if sufficient balance and account exists
+  * `check_balance()` — prints or returns the current balance if account exists
+  * `close_account()` — resets state or marks account as closed
+* Then write a main function (or loop) that offers the user a menu: 1.Create, 2.Deposit,
+* 3.Withdraw, 4.CheckBalance, 5.Close&Exit. It will call the appropriate function based on user choice.
+
+**Example skeleton:**
+
+```python
+balance = 0
+account_exists = False
+
+def create_account():
+    global account_exists, balance
+    if account_exists:
+        print("Account already exists.")
+    else:
+        account_exists = True
+        balance = 0
+        print("Account created. Balance is 0.")
+
+def deposit(amount):
+    global balance
+    if not account_exists:
+        print("You need to create an account first.")
+        return
+    balance += amount
+    print(f"You deposited {amount}. New balance: {balance}")
+
+def withdraw(amount):
+    global balance
+    if not account_exists:
+        print("You need to create an account first.")
+        return
+    if amount > balance:
+        print("Insufficient funds.")
+    else:
+        balance -= amount
+        print(f"You withdrew {amount}. Remaining balance: {balance}")
+
+def check_balance():
+    if not account_exists:
+        print("You need to create an account first.")
+    else:
+        print(f"Your balance is: {balance}")
+
+def close_account():
+    global account_exists, balance
+    if not account_exists:
+        print("No account to close.")
+    else:
+        account_exists = False
+        balance = 0
+        print("Account closed.")
+
+def main():
+    while True:
+        print("\nMenu:")
+        print("1. Create account")
+        print("2. Deposit")
+        print("3. Withdraw")
+        print("4. Check balance")
+        print("5. Close account & Exit")
+        choice = input("Enter choice (1-5): ")
+        if choice == '1':
+            create_account()
+        elif choice == '2':
+            amt = float(input("Enter amount to deposit: "))
+            deposit(amt)
+        elif choice == '3':
+            amt = float(input("Enter amount to withdraw: "))
+            withdraw(amt)
+        elif choice == '4':
+            check_balance()
+        elif choice == '5':
+            close_account()
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+If you like, I can **rewrite the tasks 15-20 using functions** (as you asked) and provide **solutions** with notes for each. Would you like me to do that now?
+
+[1]: https://www.w3schools.com/python/python_functions.asp?utm_source=chatgpt.com "Python Functions"
+[2]: https://realpython.com/defining-your-own-python-function/?utm_source=chatgpt.com "
+Defining Your Own Python Function
+
+
+POSGRE SQL:
