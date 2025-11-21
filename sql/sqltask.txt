@@ -1,0 +1,133 @@
+	fetch data
+=>select
+=>Where clause 
+=>and /or
+=>Between ,Not Between
+=>Like,Not like 
+=>order by
+=>group by 
+=>sum()
+=>count()
+=>JOIN
+
+	Between(range)
+=>between is used in codition to specify a range 
+Select * from table_name WHERE column_name between x and  y;
+
+	Like,Not like 
+=>wildcards(%,_)
+%=> single,multiple or none characters
+_=single character 
+
+display customers with letter m in the customername 
+
+Select * from customers where customername like 'm%';
+
+		order by
+=>Keyword used to sort or arrange results 
+ using a certain column
+	syntax
+select * from table_name order by column_name  ASC/DESC
+
+Display all order details from the highest quantity to the lowest
+select * from orderdetails order by quantity DESC;
+
+		count()=>Returns a number
+=>Counts the number of rows 
+	syntax
+select Count(*) from table_name ;
+
+		group by
+=>Used to group rows that have the same values
+=>Mostly used with agregate function(sum,count)
+
+total number of order details for each product
+SELECT productid,count(*) from orderdetails group by productid;
+
+total number of orders for each customer 
+SELECT customerid ,count(*) FROM orders group by customerid;
+		
+
+		Task
+1. Display how many products for each category in asc
+2. Find the total orders shipped by each of the 3 shippers in descending order.
+3.display how many orders for each employee in ascendin order
+4.display how many products for each supplier in descending order
+5.Read on Sum and joins
+
+
+
+
+		TASK
+
+1. Display how many products for each category in asc
+
+select categoryid, count(*) as [products each]
+from products
+group by categoryid
+
+2 Find the total orders shipped by each of the 3 shippers in descending order.
+
+.select shippersid, count(*) as [total orders]
+from orders
+group by shippedid
+
+
+3. display how many orders for each employee in ascending order
+select employeeid, count(*) as [totalorders]
+from orders
+group by employeeid;
+
+4.display how many products for each supplier in descending order
+
+select SupplierID, COUNT(*) AS TotalProducts
+FROM Products
+GROUP BY SupplierID;
+
+
+			Sum()
+=>used to add numeric columns 
+
+total quatity of each product
+SELECT productid,sum(quantity) as total_quantity FROM OrderDetails group by productid;
+
+total quatity of each order
+
+		JOINS
+=>used to combine data or join related tables 
+=>you can never join tables that are not related 
+	Syntax
+Select * from table1 join table2 on table1.common_column=table2.common_column
+
+
+x(parent)   y(child)
+id(pk)		id(pk)
+		xid(fk)
+
+select * from x join y on x.id=y.xid
+
+	types of joins
+1.Inner join
+2.left join
+3.right  join
+4.full join
+		Inner join
+=>joins related tables and returns similar data in the two tables 
+
+Select * from table1 inner join table2 on table1.common_column=table2.common_column;
+
+categories and products 
+
+		Task
+
+1.Join customers and orders and display customername,orderid,orderdate
+
+2.Join shippers and orders and display shippername,orderid and orderdate
+3.Join products and orderdetails and display productname,orderdetailid and Quantity
+4.Join products and suppliers and display productname,suppliername and Quantity
+
+5.Join shippers and orders and display shippername,orderid
+
+6.join orders and orderdetails display orderid,orderdetailid and quantity
+
+7.Read more on joins
